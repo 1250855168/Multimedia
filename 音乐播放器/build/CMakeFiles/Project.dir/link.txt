@@ -1,0 +1,1 @@
+/usr/local/arm/5.4.0/usr/bin/arm-linux-g++  -O3 -DNDEBUG  -rdynamic CMakeFiles/Project.dir/main.cc.o CMakeFiles/Project.dir/src/madplay.cc.o CMakeFiles/Project.dir/src/DCList.cc.o CMakeFiles/Project.dir/src/lcd.cc.o CMakeFiles/Project.dir/src/ts.cc.o  -o Project -Wl,-rpath,/home/china/arm-jpeg/lib /home/china/arm-jpeg/lib/libjpeg.so -pthread 

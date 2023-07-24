@@ -1,0 +1,1 @@
+/usr/local/arm/5.4.0/usr/bin/arm-linux-g++  -O3 -DNDEBUG  -rdynamic CMakeFiles/ve.dir/main.cc.o CMakeFiles/ve.dir/madplay.cc.o CMakeFiles/ve.dir/DCList.cc.o CMakeFiles/ve.dir/lcd.cc.o CMakeFiles/ve.dir/ts.cc.o  -o ve 

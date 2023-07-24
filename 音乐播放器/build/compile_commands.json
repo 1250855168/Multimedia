@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/china/xxx/音乐播放器/build",
+  "command": "/usr/local/arm/5.4.0/usr/bin/arm-linux-g++   -I/home/china/arm-jpeg/include -I/home/china/xxx/音乐播放器/./include  -O3 -DNDEBUG   -pthread -std=gnu++11 -o CMakeFiles/video.dir/main.cc.o -c /home/china/xxx/音乐播放器/main.cc",
+  "file": "/home/china/xxx/音乐播放器/main.cc"
+},
+{
+  "directory": "/home/china/xxx/音乐播放器/build",
+  "command": "/usr/local/arm/5.4.0/usr/bin/arm-linux-g++   -I/home/china/arm-jpeg/include -I/home/china/xxx/音乐播放器/./include  -O3 -DNDEBUG   -pthread -std=gnu++11 -o CMakeFiles/video.dir/src/mplayer.cc.o -c /home/china/xxx/音乐播放器/src/mplayer.cc",
+  "file": "/home/china/xxx/音乐播放器/src/mplayer.cc"
+},
+{
+  "directory": "/home/china/xxx/音乐播放器/build",
+  "command": "/usr/local/arm/5.4.0/usr/bin/arm-linux-g++   -I/home/china/arm-jpeg/include -I/home/china/xxx/音乐播放器/./include  -O3 -DNDEBUG   -pthread -std=gnu++11 -o CMakeFiles/video.dir/src/DCList.cc.o -c /home/china/xxx/音乐播放器/src/DCList.cc",
+  "file": "/home/china/xxx/音乐播放器/src/DCList.cc"
+},
+{
+  "directory": "/home/china/xxx/音乐播放器/build",
+  "command": "/usr/local/arm/5.4.0/usr/bin/arm-linux-g++   -I/home/china/arm-jpeg/include -I/home/china/xxx/音乐播放器/./include  -O3 -DNDEBUG   -pthread -std=gnu++11 -o CMakeFiles/video.dir/src/lcd.cc.o -c /home/china/xxx/音乐播放器/src/lcd.cc",
+  "file": "/home/china/xxx/音乐播放器/src/lcd.cc"
+},
+{
+  "directory": "/home/china/xxx/音乐播放器/build",
+  "command": "/usr/local/arm/5.4.0/usr/bin/arm-linux-g++   -I/home/china/arm-jpeg/include -I/home/china/xxx/音乐播放器/./include  -O3 -DNDEBUG   -pthread -std=gnu++11 -o CMakeFiles/video.dir/src/ts.cc.o -c /home/china/xxx/音乐播放器/src/ts.cc",
+  "file": "/home/china/xxx/音乐播放器/src/ts.cc"
+}
+]

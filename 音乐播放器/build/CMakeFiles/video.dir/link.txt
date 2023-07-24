@@ -1,0 +1,1 @@
+/usr/local/arm/5.4.0/usr/bin/arm-linux-g++  -O3 -DNDEBUG  -rdynamic CMakeFiles/video.dir/main.cc.o CMakeFiles/video.dir/src/mplayer.cc.o CMakeFiles/video.dir/src/DCList.cc.o CMakeFiles/video.dir/src/lcd.cc.o CMakeFiles/video.dir/src/ts.cc.o  -o video -Wl,-rpath,/home/china/arm-jpeg/lib /home/china/arm-jpeg/lib/libjpeg.so -pthread 

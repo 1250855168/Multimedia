@@ -1,0 +1,36 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/china/xxx/音乐播放器/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_54b2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_54b2c.dir/build.make CMakeFiles/cmTC_54b2c.dir/build
+make[1]: 进入目录“/home/china/xxx/音乐播放器/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_54b2c.dir/CheckSymbolExists.c.o
+/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc    -o CMakeFiles/cmTC_54b2c.dir/CheckSymbolExists.c.o   -c /home/china/xxx/音乐播放器/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_54b2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54b2c.dir/link.txt --verbose=1
+/usr/local/arm/5.4.0/usr/bin/arm-linux-gcc      -rdynamic CMakeFiles/cmTC_54b2c.dir/CheckSymbolExists.c.o  -o cmTC_54b2c 
+CMakeFiles/cmTC_54b2c.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1c)：对‘pthread_create’未定义的引用
+CheckSymbolExists.c:(.text+0x20)：对‘pthread_create’未定义的引用
+collect2: 错误： ld 返回 1
+CMakeFiles/cmTC_54b2c.dir/build.make:97: recipe for target 'cmTC_54b2c' failed
+make[1]: *** [cmTC_54b2c] Error 1
+make[1]: 离开目录“/home/china/xxx/音乐播放器/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_54b2c/fast' failed
+make: *** [cmTC_54b2c/fast] Error 2
+
+File /home/china/xxx/音乐播放器/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
