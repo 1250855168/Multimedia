@@ -272,7 +272,7 @@ int Is_game_close() //判断游戏结束 获得胜利 还是继续游戏
 
   ./main
 
-  ![image-20230802201345523](image\image-20230802201345523.png)
+  <img src="image\image-20230802201345523.png" alt="image-20230802201345523" style="zoom:80%;" />
 
 - 下面我们就行Linux-arm开发板的处理
 
@@ -502,6 +502,41 @@ int Is_game_close() //判断游戏结束 获得胜利 还是继续游戏
       close(fd);
       return 0;
   }
+  ```
+
+  ```makefile
+  #指定可执行文件的名字
+  TARGET := main
+  
+  #指定编译器
+  CC := arm-linux-gcc
+  
+  #CSRC指定工程中所有的C源文件列表
+  CSRCS := $(wildcard *.c)
+  
+  #OBJS指定工程中所有的.o文件列表
+  OBJS := $(patsubst %.c,%.o,$(CSRCS))
+  
+  #INCS指定头文件的目录
+  INCS += -I ./ -I ../inc -I /home/china/arm-jpeg/include
+  
+  #LIBS指定所需要依赖的库以及库的搜索路径
+  LIBS += -L ../lib -L /home/china/arm-jpeg/lib -l jpeg -l pthread
+  
+  #可执行文件的编译规则
+  $(TARGET) : $(OBJS)
+  	$(CC) $^ $(LIBS) -o $@
+  
+  #.o文件的编译规则
+  %.o : %.c
+  	$(CC) -c $< $(INCS) -o $@
+  	
+  #"清除":所有的中间文件和最终的可执行文件
+  clean:
+  	rm -rf $(OBJS)
+  	rm -rf $(TARGET)
+  install:
+  	cp main /mnt/hgfs/Yang    #下载到共享目录下面
   ```
 
   
