@@ -272,7 +272,7 @@ int Is_game_close() //判断游戏结束 获得胜利 还是继续游戏
 
   ./main
 
-  <img src="image\image-20230802201345523.png" alt="image-20230802201345523" style="zoom:80%;" />
+  <img src=".\image\image-20230802201345523.png" alt="image-20230802201345523" style="zoom:80%;" />
 
 - 下面我们就行Linux-arm开发板的处理
 
