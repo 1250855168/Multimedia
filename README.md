@@ -554,11 +554,11 @@ int Is_game_close() //判断游戏结束 获得胜利 还是继续游戏
 
 ## 多媒体播放器
 
-![image-20230804201144816](.\image\image-20230804201144816.png)
+<img src="image\image-20230804201144816.png" alt="image-20230804201144816" style="zoom:80%;" />
 
 ​																																**mp3**
 
-![image-20230804201302343](.\image\image-20230804201302343.png)
+<img src="image\image-20230804201302343.png" alt="image-20230804201302343" style="zoom:80%;" />
 
 ​																											
 
