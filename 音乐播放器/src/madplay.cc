@@ -101,14 +101,6 @@ int madplay::music_play()
     char buf[20]; // 用于存放拼接后的字符串
     std::shared_ptr<DCList::Node> head = list;
 
-    printf("%s\n", head->data);
-
-    printf("%s\n", head->next->data);
-
-    printf("%s\n", head->next->next->data);
-
-    printf("%s\n", head->next->next->next->data);
-
     printf("成功打开音乐播放器！\n");
 
     mkfifo("fifo_cmd", 0666);
