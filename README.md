@@ -2,7 +2,10 @@
 
 - **每个项目我都会介绍 他们底层的C语言代码实现**  
 - **我选择了 2048小游戏和多媒体播放器 进行了linux-arm开发板上如何使用图片的讲解**
+- **消消乐和贪吃蛇我只给出了c语言代码示例说明**
 - **在linux-arm开发板的依赖我也会进行说明**
+
+​									[消消乐小游戏](#消消乐小游戏)                           [贪吃蛇小游戏](#贪吃蛇小游戏)                           [多媒体播放器](#多媒体播放器)
 
 ## 2048小游戏
 
@@ -18,7 +21,7 @@
 
 - 通过上下左右的数组合并 和 打印这个二维数组 就能完成这个游戏的效果
 
-  
+  ​					
 
 下面我们通过代码进行详细讲解
 
@@ -550,3 +553,52 @@ int Is_game_close() //判断游戏结束 获得胜利 还是继续游戏
 
 
 ## 多媒体播放器
+
+![image-20230804201144816](.\image\image-20230804201144816.png)
+
+​																																**mp3**
+
+![image-20230804201302343](.\image\image-20230804201302343.png)
+
+​																											
+
+​																																**mp4**	
+
+- 多媒体播放器有mp3和mp4版本的  madplay 既可以播放mp3也可以播放mp4 只是在mp3时它不显示图片 你自己放一张自己的图片就行 mp4可以播放mv
+
+- 那我来讲一讲这个项目的架构
+
+- 首先这个代码是c++代码 我是通过CMakeLists.txt进行构建 头文件include .cpp文件在src中  加一个main.cpp
+
+  ```cmake
+  cmake_minimum_required(VERSION 3.0.0)
+  #选择cmake的最小版本号
+  
+  set(CMAKE_CXX_STANDARD 11)
+  #设置编译器的版本是c++ 11
+  
+  project(video)
+  #项目名字
+  #project(music)
+  
+  #set(THREADS_PREFER_PTHREAD_FLAG ON) 可以不使用也行
+  find_package(Threads REQUIRED)
+  #这个指令是告诉cmake在编译的时候 找到线程库
+  
+  include_directories(/home/china/arm-jpeg/include ./include)
+  #添加头文件路径
+  
+  #add_executable(${PROJECT_NAME} main.cc src/madplay.cc src/DCList.cc src/lcd.cc src/ts.cc)
+  add_executable(${PROJECT_NAME} main.cc src/mplayer.cc src/DCList.cc src/lcd.cc src/ts.cc)
+  #生成可自行文件video
+  
+  find_library(jpeg_lib NAMES jpeg PATHS /home/china/arm-jpeg/lib)
+  #找到jpg的动态库
+  
+  target_link_libraries(${PROJECT_NAME} PUBLIC Threads::Threads ${jpeg_lib})
+  #给项目添加绑定动态库
+  
+  
+  ```
+
+  
